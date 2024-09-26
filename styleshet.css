@@ -1,0 +1,266 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #8fe0ff;
+    color: #333;
+}
+
+header {
+    background: #54416d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #00A1E4;
+}
+
+footer {
+    background-color: #31255a;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #00A1E4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px);
+    background-image: url('C:/Users/Gamer 1/Downloads/imagemain.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.weather-display {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a2f3b;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #016DD9;
+}
+
+.selected {
+    background-color: #2a2f3b;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 100000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow {
+    height: 15px;
+    width: 15px;
+    fill: white;
+    transition: 300ms;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #2a2f3b;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 300ms;
+}
+
+.select:hover > .options {
+    opacity: 1;
+    top: 100%;
+}
+
+.select:hover > .selected .arrow {
+    transform: rotate(180deg);
+}
+
+.option {
+    padding: 10px;
+    transition: 300ms;
+    background-color: #2a2f3b;
+}
+
+.option:hover {
+    background-color: #323741;
+}
+
+.weather-display.card {
+  width: 280px;
+  height: 150px;
+  background: rgb(17, 4, 134);
+  border-radius: 15px;
+  box-shadow: rgb(0,0,0,0.7) 5px 10px 50px, rgb(0,0,0,0.7) -5px 0px 250px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.weather-display.card:hover {
+  box-shadow: rgb(0,0,0) 5px 10px 50px, rgb(0,0,0) -5px 0px 250px;
+}
+
+.weather-display.card {
+  width: 280px;
+  height: 170px; /* Increased height to accommodate city name */
+  /* ... (keep other existing styles) ... */
+}
+
+.city-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.time-text {
+  font-size: 50px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.time-sub-text {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.day-text {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.moon {
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.weather-display.card:hover > .moon {
+  font-size: 23px;
+}
+
+.select {
+  width: 280px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2a2f3b;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #016DD9;
+}
+
+button {
+    height: 3em;
+    width: 200px;
+    border: none;
+    border-radius: 10em;
+    background: #016DD9;
+    font-size: 17px;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    animation: shake3856 0.3s linear infinite both;
+}
+
+@keyframes shake3856 {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}

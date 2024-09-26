@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App by Christian Alegre</title>
+    <link rel="stylesheet" href="styleshet.css">
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+        <p>By Christian Alegre</p>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <div class="weather-display card" id="weatherDisplay">
+                <div class="moon">🌙</div>
+                <div class="city-name" id="cityName">Select a city</div>
+                <div class="time-text"><span id="temperature">--</span><span class="time-sub-text">°C</span></div>
+                <div class="day-text">
+                    Humidity: <span id="humidity">--%</span><br>
+                    Wind: <span id="windSpeed">-- km/h</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <select id="citySelect" class="select">
+                    <option value="">Select a city</option>
+                    <option value="Abuyog">Abuyog</option>
+                    <option value="Bato">Bato</option>
+                    <option value="Baybay City">Baybay City</option>
+                    <option value="Carigara">Carigara</option>
+                    <option value="Ormoc City">Ormoc City</option>
+                </select>
+                <button id="getWeatherBtn">Get Weather</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Christian Rey. All rights reserved.</p>
+        <p>Follow me on <a href="https://twitter.com">Twitter</a> | <a href="https://github.com">GitHub</a></p>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+</html>
